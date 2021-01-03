@@ -66,4 +66,7 @@ def show_form_2():
 
 @app.route('/greet-2')
 def get_greeting_2():
-  
+  username = request.args['username']
+  request.args.get["wants_compliments"]
+  sample(COMPLIMENTS, 3)
+  return "ASFSDF"
