@@ -38,6 +38,32 @@ def say_hello():
 @app.route("/lucky")
 def show_lucky_num():
     "Example of simple dynamic template"
-    num = randint(1,100)
-    return render_template("lucky.html", lucky_num =num)
+    num = randint(1,10)
+    return render_template("lucky.html", lucky_num =num, msg="You are so lucky!")
+
+
+  ####JINJA Conditionals 
+#used in html template
+  {% if CONDITION_EXPR %} ... {% endif %}
+
+{% if compliments %}
+  You're so:
+  ...
+{% endif %}
+
+
+#JINJA LOOPS
+
+
+@app.route('/spell/<word>')
+def spell_word(word):
+  return render_template('spell_word.html', word = word)
+
+
+@app.route('/form-2')
+def show_form_2():
+  return render_template("form_2.html")
+
+@app.route('/greet-2')
+def get_greeting_2():
   
